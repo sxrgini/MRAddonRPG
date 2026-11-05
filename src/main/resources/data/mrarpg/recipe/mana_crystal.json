@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:glowstone_dust",
+    "B": "minecraft:blaze_powder",
+    "A": "minecraft:amethyst_shard"
+  },
+  "pattern": [
+    "BDB",
+    "DAD",
+    "BDB"
+  ],
+  "result": {
+    "id": "mrarpg:mana_crystal",
+    "count": 1
+  }
+}
