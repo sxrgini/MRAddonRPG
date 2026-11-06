@@ -2,9 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "D": "minecraft:glowstone_dust",
-    "B": "minecraft:blaze_powder",
-    "A": "minecraft:amethyst_shard"
+    "D": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    }
   },
   "pattern": [
     "BDB",

@@ -1,6 +1,6 @@
 package com.iiampanda.mrarpg;
 
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -42,12 +42,12 @@ public final class Mrarpg
     {
     }
 
-    public static Identifier id(String path)
+    public static ResourceLocation id(String path)
     {
-        return Identifier.fromNamespaceAndPath(ID, path);
+        return ResourceLocation.fromNamespaceAndPath(ID, path);
     }
 
-    public static boolean lootMatches(Identifier table)
+    public static boolean lootMatches(ResourceLocation table)
     {
         return table.getNamespace().equals("minecraft") && table.getPath().startsWith("chests/") && LOOT.contains(table.getPath().substring(7));
     }
