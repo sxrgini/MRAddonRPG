@@ -24,7 +24,7 @@ neoForge {
 }
 
 dependencies {
-    compileOnly files('libs/morph-neoforge-26.2-1.0.5.jar')
+    compileOnly files('libs/morph-neoforge-1.21.1-1.0.5.jar')
 }
 
 processResources {
@@ -35,11 +35,11 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 25
+    it.options.release = 21
     it.options.encoding = 'UTF-8'
 }
 
 java {
     withSourcesJar()
-    toolchain.languageVersion = JavaLanguageVersion.of(25)
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
 }

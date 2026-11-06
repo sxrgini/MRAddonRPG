@@ -1,5 +1,6 @@
 package com.iiampanda.mrarpg;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -15,8 +16,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class MrarpgNeoForge
 {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Mrarpg.ID);
-    public static final DeferredItem<Item> BOOK = ITEMS.registerItem("book_of_morphs", BookOfMorphsItem::new, p -> p.stacksTo(1).rarity(Rarity.RARE));
-    public static final DeferredItem<Item> CRYSTAL = ITEMS.registerItem("mana_crystal", ManaCrystalItem::new, p -> p.stacksTo(16).rarity(Rarity.UNCOMMON));
+    public static final DeferredItem<Item> BOOK = ITEMS.register("book_of_morphs", () -> new BookOfMorphsItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<Item> CRYSTAL = ITEMS.register("mana_crystal", () -> new ManaCrystalItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
 
     public MrarpgNeoForge(IEventBus modBus)
     {

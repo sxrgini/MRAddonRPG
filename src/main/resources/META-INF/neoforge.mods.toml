@@ -14,14 +14,14 @@ description = '''This turns Morph: Revived into an RPG style Morph system'''
 [[dependencies.mrarpg]]
 modId = "neoforge"
 type = "required"
-versionRange = "[26.2,)"
+versionRange = "[21.1,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.mrarpg]]
 modId = "minecraft"
 type = "required"
-versionRange = "[26.2,26.3)"
+versionRange = "[1.21.1,1.21.2)"
 ordering = "NONE"
 side = "BOTH"
 
