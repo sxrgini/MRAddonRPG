@@ -1,0 +1,33 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "LGPL-3.0-only"
+
+[[mods]]
+modId = "mrarpg"
+version = "${version}"
+displayName = "Morph: Revived Addon - RPG"
+logoFile = "icon.png"
+authors = "iiAmPanda"
+credits = "Addon for Morph: Revived by iiAmPanda. Original Morph mod by iChun."
+description = '''This turns Morph: Revived into an RPG style Morph system'''
+
+[[dependencies.mrarpg]]
+modId = "neoforge"
+type = "required"
+versionRange = "[26.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mrarpg]]
+modId = "minecraft"
+type = "required"
+versionRange = "[26.2,26.3)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mrarpg]]
+modId = "morph"
+type = "required"
+versionRange = "[1.0.5,)"
+ordering = "AFTER"
+side = "BOTH"

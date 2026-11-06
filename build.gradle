@@ -1,5 +1,6 @@
 plugins {
-    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.148'
 }
 
 version = project.mod_version
@@ -15,17 +16,21 @@ sourceSets {
     }
 }
 
+neoForge {
+    version = project.neo_version
+    mods {
+        mrarpg { sourceSet sourceSets.main }
+    }
+}
+
 dependencies {
-    minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
-    compileOnly files('libs/morph-fabric-26.3-1.0.5.jar')
+    compileOnly files('libs/morph-neoforge-26.2-1.0.5.jar')
 }
 
 processResources {
     inputs.property "version", project.version
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
+    filesMatching("META-INF/neoforge.mods.toml") {
+        expand "version": inputs.properties.version
     }
 }
 
@@ -36,6 +41,5 @@ tasks.withType(JavaCompile).configureEach {
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.VERSION_25
-    targetCompatibility = JavaVersion.VERSION_25
+    toolchain.languageVersion = JavaLanguageVersion.of(25)
 }
